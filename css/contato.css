@@ -1,0 +1,102 @@
+body {    
+    margin: 0 !important;
+    padding: 0 !important;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #DC731E;
+}
+
+li {
+    float: left;
+}
+
+ul {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #C7611A;
+}
+
+.active{
+    background-color: #C7611A ;
+}
+
+#footerStyle {
+    display: block;
+    background-color: #DC731E;
+    color: white;
+    padding: 14px 16px;
+}
+
+#h2Border{
+    width: 98%;
+    height: 50px;
+    margin: 1%;
+    border-bottom: solid #C7611A;
+}
+h2{
+    /*position: relative;*/
+    top: 15px;
+    color: #C7611A;
+    margin: 50px;
+}
+
+h1{
+    color: #C7611A;
+    margin: 30px;
+}
+label{
+    margin-top: 20px;
+    margin: 10px;
+    font-size: 20pt;
+    color: #C7611A;
+}
+#contatoStyle {
+    width: 1150px;
+    height: 550px;
+    border: 2px solid #C7611A;
+    border-radius: 5px;
+    margin: 50px;
+}
+
+input{
+    
+    width: 350px;
+    height: 20px;
+    margin-bottom: 10px;
+}
+#campo{
+    width: 500px;
+    display: inline-block;
+}
+
+textarea{
+    width: 1120px;
+    height: 300px;
+    margin: 10px;
+}
+#enviar{
+    margin: 10px;
+    width: 1125px;
+    border: 1px solid lightgrey;
+    border-bottom: 5px solid #C7611A;
+    background-color: white;
+    padding: 14px 16px;
+    margin-bottom: 5px;
+}
