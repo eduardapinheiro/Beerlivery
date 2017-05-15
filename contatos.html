@@ -1,9 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
-	<title>Contatos</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/contato.css" />
 </head>
+
 <body>
 
+    <ul>
+        <li><a href="index.html">Principal</a></li>
+        <li><a href="quemsomos.html">Quem Somos</a></li>
+        <li><a href="">Loja</a></li>
+        <li><a href="">Serviços</a></li>
+        <li><a class="active" href="contato.html">Fale Conosco</a></li>
+
+    </ul>
+    <div style="height: 45px;"> </div>
+    <div id="h2Border">
+        <h1>Fale com o Pedroca</h1>
+    </div>
+    <h2>Preencha os campos e nos envie sua dúvida</h2>
+    <div id="contatoStyle">
+        <form action="http://franco.eti.br/aulas/topicos/avb1/php/enviar1.php" method="POST">
+            <div id="campo">
+                <label for="nomeProduto">Nome:&nbsp&nbsp&nbsp</label>
+                <input type="text" id="nome" name="nome" placeholder="Obrigatório" maxlength="45" required>
+            </div>
+            <div id="campo">
+                <label for="nomeProduto">E-mail:&nbsp&nbsp&nbsp</label>
+                <input type="text" id="email" name="email" placeholder="Obrigatório" maxlength="45" required>
+            </div>
+
+            <div id="campo">
+                <label for="nomeProduto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto" placeholder="Obrigatório" maxlength="45" required>
+            </div>
+            <div id="campo">
+                <label for="nomeProduto">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" placeholder="Obrigatório" maxlength="45" required>
+            </div>
+            <div>
+                <label for="descricao">Mensagem<br></label>
+                <textarea id="mensagem" name="mensagem" cols="10" rows="5" placeholder="Digite sua mensagem aqui" required></textarea>
+            </div>
+            <button type="submit" id="enviar">Enviar</button>
+        </form>
+    </div>
+
+    </div>
+    </div>
+
 </body>
+
+<footer>
+    <div id="footerStyle">
+        <p>avenida paraiso alado, 666 - valhalla</p>
+        <p>telefone: (92) 99669-6996</p>
+        <p>e-mail: pedrao@porreta.com.br</p>
+    </div>
+</footer>
+
 </html>
