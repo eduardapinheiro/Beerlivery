@@ -1,0 +1,23 @@
+img {
+    max-height: 190px;
+}
+
+#nameInThumb {
+    text-align: center;
+    color: black;
+}
+
+#nameInThumb a {
+    color: black;
+}
+
+.thumbnail h4:nth-of-type(2) {
+    text-align: center;
+    color: darkblue;
+    font-weight: bolder;
+}
+
+.thumbnail {
+    border-radius: 50%;
+    background-color: rgba(128, 64, 0, 0.4);
+}
