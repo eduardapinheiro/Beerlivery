@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Beerlivery</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="shortcut icon" href="http://spyrestudios.com/favicon.ico">
+  <link rel="icon" href="http://spyrestudios.com/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="css/telas/carrinho.css">
+  
+</head>
+
+<body>
+
+  
+  <div id="w">
+    <header id="title">
+      <h1>Carrinho de compras</h1>
+    </header>
+    <div id="page">
+      <table id="cart">
+        <thead>
+          <tr>
+            <th class="first"></th>
+            <th class="second">Qtd</th>
+            <th class="third">Produto</th>
+            <th class="fourth">Preco total</th>
+            <th class="fifth">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="productitm">
+
+            <td><img src="img/skol.jpg" class="thumb"></td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>Skol </td>
+            <td>R$9.00</td>
+            <td><span class="remove"><img src="img/trash.png" alt="X"></span></td>
+          </tr>
+          <tr class="productitm">
+
+            <td><img src="img/brahma.jpg" class="thumb"></td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>Brahma</td>
+            <td>R$8.95</td>
+            <td><span class="remove"><img src="img/trash.png" alt="X"></span></td>
+          </tr>
+
+            <tr class="productitm">
+
+            <td><img src="img/skol.jpg" class="thumb"></td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>Skol </td>
+            <td>R$9.00</td>
+            <td><span class="remove"><img src="img/trash.png" alt="X"></span></td>
+          </tr>
+          <tr class="productitm">
+
+            <td><img src="img/brahma.jpg" class="thumb"></td>
+            <td><input type="number" value="1" min="0" max="99" class="qtyinput"></td>
+            <td>Brahma</td>
+            <td>R$8.95</td>
+            <td><span class="remove"><img src="img/trash.png" alt="X"></span></td>
+          </tr>
+      
+          
+          <!-- tax + subtotal -->
+          <tr class="extracosts">
+            <td class="light">Frete</td>
+            <td colspan="2" class="light"></td>
+            <td>R$3.00</td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr class="totalprice">
+            <td class="light">Total:</td>
+            <td colspan="2">&nbsp;</td>
+            <td colspan="2"><span class="thick">R$38.9</span></td>
+          </tr>
+          
+          <!-- checkout btn -->
+          <tr class="checkoutrow">
+            <td colspan="5" class="checkout"><button id="submitbtn">Finalizar agora!</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
