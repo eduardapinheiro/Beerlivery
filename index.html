@@ -82,7 +82,7 @@
                 </div>
 
                 <div class="row">
-                    
+                    <!--<form>-->
                     <div class="col-md-12">
                         <h3>Principais Produtos</h3>
                         <hr>
@@ -92,8 +92,9 @@
                         <div class="thumbnail">
                             <img src="img/bebidas/absolute_vodka.png" alt="">
                             <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Absolute Vodka</a></h4>
-                                <h4>R$ 66,99</h4>
+                                <h4 id="nameInThumb"><a href="#">Corona</a></h4>
+                                <button onclick="addInCar(1, 1)">R$ 66,99</button>
+                                <!--<h4>R$ 66,99</h4>-->
                             </div>
                         </div>
                     </div>
@@ -103,7 +104,8 @@
                             <img src="img/bebidas/ciroc.png" alt="">
                             <div class="caption">
                                 <h4 id="nameInThumb"><a href="#">Ciroc</a></h4>
-                                <h4>R$ 109,99</h4>
+                                <button onclick="addInCar(2, 1)">R$ 109,99</button>
+                                <!--<h4>R$ 109,99</h4>-->
                             </div>
                         </div>
                     </div>
@@ -257,7 +259,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <!--</form>-->
                 </div>
 
             </div>
@@ -282,6 +284,11 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+    <script src="script/firebase.js"></script>
+    <script src="script/carrinho.js"></script>
+
 </body>
 
 </html>
+
