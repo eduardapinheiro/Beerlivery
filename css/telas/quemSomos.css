@@ -1,0 +1,64 @@
+#circle {
+    background-image:url("centro-distribuicao.png");
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border:10px solid #D9CAAF;
+    color:black;
+    float: left;
+
+
+}
+
+#circle2 {
+    background-image:url("2.jpeg");
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border:10px solid #D9CAAF;
+    color:black;
+    float: left;
+}
+#circle3 {
+    background-image:url("3.jpeg");
+   width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border:10px solid #D9CAAF;
+    color:black;
+    float: right;
+
+ 
+}
+#circle4 {
+    background-image:url("4.jpg");
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border:10px solid #D9CAAF;
+    color:black;
+    float: left;
+
+
+}
+.innerTEXT{
+    position:absolute;
+    top:100px;
+    left:300px;
+
+}
+
+.innerTEXT2{
+    position:absolute;
+    top:100px;
+    right:300px;
+}
+
+/*
+h1{
+    color: #D9CAAF;
+}
+*/
+
+
+
