@@ -1,5 +1,5 @@
 #circle {
-    background-image:url("centro-distribuicao.png");
+    background-image:url("../../img/imgQuemSomos/centro-distribuicao.png");
     width: 280px;
     height: 280px;
     border-radius: 50%;
@@ -11,7 +11,7 @@
 }
 
 #circle2 {
-    background-image:url("2.jpeg");
+    background-image:url("../../img/imgQuemSomos/2.jpeg");
     width: 280px;
     height: 280px;
     border-radius: 50%;
@@ -20,7 +20,7 @@
     float: left;
 }
 #circle3 {
-    background-image:url("3.jpeg");
+    background-image:url("../../img/imgQuemSomos/3.jpeg");
    width: 280px;
     height: 280px;
     border-radius: 50%;
@@ -31,7 +31,7 @@
  
 }
 #circle4 {
-    background-image:url("4.jpg");
+    background-image:url("../../img/imgQuemSomos/4.jpg");
     width: 280px;
     height: 280px;
     border-radius: 50%;
