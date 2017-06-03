@@ -1,109 +1,24 @@
 @import url(http://fonts.googleapis.com/css?family=Fredoka+One);
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  outline: none;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-html { overflow-y: scroll; }
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 62.5%;
-  line-height: 1;
-  color: #414141;
- background:#D9CAAF; /* http://subtlepatterns.com/old-map/ */
-  padding: 25px 0;
-}
-
 ::selection { background:#D9CAAF; }
 ::-moz-selection { background: #D9CAAF;; }
 ::-webkit-selection { background: #D9CAAF;; }
 
-br { display: block; line-height: 1.6em; } 
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
-ol, ul { list-style: none; }
-
-input, textarea { 
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  outline: none; 
-}
-
-blockquote, q { quotes: none; }
-blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
-strong, b { font-weight: bold; }
-em, i { font-style: italic; }
-
 table { border-collapse: collapse; border-spacing: 0; }
 img { border: 0; max-width: 100%; }
 
-h1 {
-  font-family: 'Fredoka One', Helvetica, Tahoma, sans-serif;
-  color: #58330a;
-  text-shadow: 1px 2px 0 #C2AB90;
-  font-size: 3.5em;
-  line-height: 1.1em;
-  padding: 6px 0;
-  font-weight: normal;
-  text-align: center;
-}
-
-
-/* page structure */
-#w {
-  display: block;
-  width: 600px;
-  margin: 0 auto;
-}
-
-#title {
-  display: block;
-  width: 100%;
-  background: #C2AB90;
-  padding: 10px 0;
-  -webkit-border-top-right-radius: 6px;
-  -webkit-border-top-left-radius: 6px;
-  -moz-border-radius-topright: 6px;
-  -moz-border-radius-topleft: 6px;
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
-}
-
-#page {
-  display: block;
-  background: #fff;
-  padding: 15px 0;
-  -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-  -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-}
-
 /** cart table **/
 #cart {
-  display: block;
   border-collapse: collapse;
   margin: 0;
   width: 100%;
   font-size: 1.2em;
-  color: #444;
 }
+
 #cart thead th {
   padding: 8px 0;
   font-weight: bold;
+  text-align: center;
 }
 
 #cart thead th.first {
@@ -128,8 +43,7 @@ h1 {
 }
 
 tr.productitm {
-  height: 65px;
-  line-height: 65px;
+  height: 130px;
   border-bottom: 1px solid #D9CAAF;
 }
 
@@ -181,10 +95,11 @@ tr.extracosts {
 
 /** submit btn **/
 tr.checkoutrow {
-  background: #C2AB90;
+  background: rgba(169, 117, 61, 0.7);
   border-top: 1px solid #C2AB90;
   border-bottom: 1px solid #C2AB90;
 }
+
 td.checkout {
   padding: 12px 0;
   padding-top: 20px;
@@ -214,6 +129,7 @@ td.checkout {
   background-image: -o-linear-gradient(#fff, #fff;
   background-image: linear-gradient(#fff, #fff);
 }
+
 #submitbtn:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4d9cff), color-stop(100%, #338eff));
   background-image: -webkit-linear-gradient(#fff, #fff);
@@ -221,6 +137,7 @@ td.checkout {
   background-image: -o-linear-gradient(#fff, #fff;
   background-image: linear-gradient(#fff, #fff);
 }
+
 #submitbtn:active {
   border-bottom: 0;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #338eff), color-stop(100%, #fff));
