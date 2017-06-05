@@ -1,0 +1,16 @@
+{
+  "bebidas" : {
+    "1" : {
+      "nome" : "Absolute Vodka",
+      "preco" : 66.99
+    },
+    "2" : {
+      "nome" : "Ciroc",
+      "preco" : 66.99
+    },
+    "3" : {
+      "nome" : "Jack Daniel's",
+      "preco" : 66.99
+    }
+  }
+}
