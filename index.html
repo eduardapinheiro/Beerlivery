@@ -24,6 +24,9 @@
     
 </head>
 
+
+
+
 <body>
 
     <!-- Navigation -->
@@ -60,6 +63,8 @@
         <!-- /.container -->
     </nav>
 
+
+
     <!-- Page Content -->
     <div class="container">
 
@@ -75,191 +80,57 @@
                             <a href="faleConosco.html" class="btn btn-prmiary btn-sm" style="background-color: rgba(169, 117, 61, 0.8);">Fale Conosco</a>   <!-- FUTURAMENTE A TAG STYLE DEVE SER RETIRADA -->
                         </div>
                         <div id="osDeBaixo">
-                            <a href="carrinho.html" class="btn btn-default col-sm-6">Carrinho Vazio</a>
+                            <a href="#" class="btn btn-default col-sm-6">Carrinho Vazio</a>
                             <h1 id="cart_h1" class="col-sm-6"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></h1>
                         </div>
                     </div>
                 </div>
 
-                <div class="row">
-                    <!--<form>-->
+                <div class="row" id="principaisProdutos">
+                    
                     <div class="col-md-12">
                         <h3>Principais Produtos</h3>
                         <hr>
                     </div>
-
+                    
+                    
+<!--
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <img src="img/bebidas/absolute_vodka.png" alt="">
                             <div class="caption">
                                 <h4 id="nameInThumb"><a href="#">Corona</a></h4>
                                 <button onclick="addInCar(1, 1)">R$ 66,99</button>
-                                <!--<h4>R$ 66,99</h4>-->
+                                // <h4>R$ 66,99</h4>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bebidas/ciroc.png" alt="">
-                            <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Ciroc</a></h4>
-                                <button onclick="addInCar(2, 1)">R$ 109,99</button>
-                                <!--<h4>R$ 109,99</h4>-->
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bebidas/whisky.png" alt="">
-                            <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Whisky</a></h4>
-                                <h4>R$ 89,90</h4>
-                            </div>
-                        </div>
-                    </div>
+-->
                     
-                    <div class="col-md-12">
+                    
+                    
+                    <div class="col-md-12" id="cervejas">
                         <h3>Cervejas</h3>
                         <hr>
                     </div>
-                    
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bebidas/heineken.png" alt="">
-                            <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Heineken</a></h4>
-                                <h4>R$ 4,50</h4>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bebidas/itaipava.png" alt="">
-                            <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Itaipava</a></h4>
-                                <h4>R$ 3,50</h4>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bebidas/skol.png" alt="">
-                            <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Skol</a></h4>
-                                <h4>R$ 16,50</h4>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-12">
+
+                    <div class="col-md-12" id="vinhos">
                         <h3>Vinhos</h3>
                         <hr>
                     </div>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bebidas/absolute_vodka.png" alt="">
-                            <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Absolute Vodka</a></h4>
-                                <h4>R$ 66,99</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bebidas/ciroc.png" alt="">
-                            <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Ciroc</a></h4>
-                                <h4>R$ 109,99</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bebidas/whisky.png" alt="">
-                            <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Whisky</a></h4>
-                                <h4>R$ 89,90</h4>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-12">
+                    <div class="col-md-12" id=whiskys>
                         <h3>Whiskys</h3>
                         <hr>
                     </div>
+
                     
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bebidas/heineken.png" alt="">
-                            <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Heineken</a></h4>
-                                <h4>R$ 4,50</h4>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bebidas/itaipava.png" alt="">
-                            <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Itaipava</a></h4>
-                                <h4>R$ 3,50</h4>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail"> <!-- AQUI AQUI -->
-                            <img src="img/bebidas/skol.png" alt="">
-                            <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Skol</a></h4>
-                                <h4>R$ 16,50</h4>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-md-12">
+                    <div class="col-md-12" id="vodkas">
                         <h3>Vodkas</h3>
                         <hr>
                     </div>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bebidas/absolute_vodka.png" alt="">
-                            <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Absolute Vodka</a></h4>
-                                <h4>R$ 66,99</h4>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bebidas/ciroc.png" alt="">
-                            <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Ciroc</a></h4>
-                                <h4>R$ 109,99</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4 col-lg-4 col-md-4">
-                        <div class="thumbnail">
-                            <img src="img/bebidas/whisky.png" alt="">
-                            <div class="caption">
-                                <h4 id="nameInThumb"><a href="#">Whisky</a></h4>
-                                <h4>R$ 89,90</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <!--</form>-->
                 </div>
 
             </div>
@@ -284,11 +155,21 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
-    <script src="script/firebase.js"></script>
-    <script src="script/carrinho.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/scriptsHome.js"></script>
+
+
+
+
 
 </body>
 
+
+
 </html>
+
+
+
+
+
 
