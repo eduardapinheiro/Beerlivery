@@ -57,7 +57,7 @@ for (i = 0; i < list.length; i = i + 1) {
         namein.id = "nameInThumb";
         namein.appendChild(nomeProduto);
 
-        var preco = document.createElement('h4');
+        var preco = document.createElement('button');
         preco.innerHTML = bebidas[x].preco;
 
         var cap = document.createElement('div');
