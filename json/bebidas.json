@@ -1,16 +1,35 @@
 {
   "bebidas" : {
     "1" : {
+      "id" : 1,
       "nome" : "Absolute Vodka",
       "preco" : 66.99
     },
     "2" : {
+      "id" : 2,
       "nome" : "Ciroc",
       "preco" : 66.99
     },
     "3" : {
+      "id" : 3,
       "nome" : "Jack Daniel's",
       "preco" : 66.99
+    },
+    "4" : {
+      "id" : 4,
+      "nome" : "Heineken",
+      "preco" : 66.99
+    },
+    "5" : {
+      "id" : 5,
+      "nome" : "Itaipava",
+      "preco" : 66.99
+    },
+    "6" : {
+      "id" : 6,
+      "nome" : "Skol",
+      "preco" : 66.99
     }
+      
   }
 }
