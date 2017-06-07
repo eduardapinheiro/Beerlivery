@@ -1,22 +1,22 @@
-var bebidasPrincipaisProdutos = [ {nome: "vodka", preco: "R$66,99", imagem: "img/bebidas/absolute_vodka.png"},
-                                 {nome: "whisky", preco: "R$66,99", imagem: "img/bebidas/ciroc.png"},
-                                 {nome: "cerveja", preco: "R$66,99", imagem: "img/bebidas/whisky.png"}];
+var bebidasPrincipaisProdutos = [ {id: 1, nome: "vodka", preco: "R$66,99", imagem: "img/bebidas/absolute_vodka.png"},
+                                 {id: 2, nome: "whisky", preco: "R$66,99", imagem: "img/bebidas/ciroc.png"},
+                                 {id: 3, nome: "cerveja", preco: "R$66,99", imagem: "img/bebidas/whisky.png"}];
 
-var bebidasCervejas = [ {nome: "vodka", preco: "R$66,99", imagem: "img/bebidas/absolute_vodka.png"},
-                        {nome: "whisky", preco: "R$66,99", imagem: "img/bebidas/ciroc.png"},
-                        {nome: "cerveja", preco: "R$66,99", imagem: "img/bebidas/whisky.png"}];
+var bebidasCervejas = [ {id: 4, nome: "vodka", preco: "R$66,99", imagem: "img/bebidas/absolute_vodka.png"},
+                        {id: 5, nome: "whisky", preco: "R$66,99", imagem: "img/bebidas/ciroc.png"},
+                        {id: 6, nome: "cerveja", preco: "R$66,99", imagem: "img/bebidas/whisky.png"}];
 
-var bebidasVinhos = [ {nome: "vodka", preco: "R$66,99", imagem: "img/bebidas/absolute_vodka.png"},
-                        {nome: "whisky", preco: "R$66,99", imagem: "img/bebidas/ciroc.png"},
-                        {nome: "cerveja", preco: "R$66,99", imagem: "img/bebidas/whisky.png"}];
+var bebidasVinhos = [ {id: 7, nome: "vodka", preco: "R$66,99", imagem: "img/bebidas/absolute_vodka.png"},
+                        {id: 8, nome: "whisky", preco: "R$66,99", imagem: "img/bebidas/ciroc.png"},
+                        {id: 9, nome: "cerveja", preco: "R$66,99", imagem: "img/bebidas/whisky.png"}];
 
-var bebidasWhiskys = [ {nome: "vodka", preco: "R$66,99", imagem: "img/bebidas/absolute_vodka.png"},
-                        {nome: "whisky", preco: "R$66,99", imagem: "img/bebidas/ciroc.png"},
-                        {nome: "cerveja", preco: "R$66,99", imagem: "img/bebidas/whisky.png"}];
+var bebidasWhiskys = [ {id: 10, nome: "vodka", preco: "R$66,99", imagem: "img/bebidas/absolute_vodka.png"},
+                        {id: 11, nome: "whisky", preco: "R$66,99", imagem: "img/bebidas/ciroc.png"},
+                        {id: 12, nome: "cerveja", preco: "R$66,99", imagem: "img/bebidas/whisky.png"}];
 
-var bebidasVodkas = [ {nome: "vodka", preco: "R$66,99", imagem: "img/bebidas/absolute_vodka.png"},
-                    {nome: "whisky", preco: "R$66,99", imagem: "img/bebidas/ciroc.png"},
-                    {nome: "cerveja", preco: "R$66,99", imagem: "img/bebidas/whisky.png"}];
+var bebidasVodkas = [ {id: 13, nome: "vodka", preco: "R$66,99", imagem: "img/bebidas/absolute_vodka.png"},
+                    {id: 14, nome: "whisky", preco: "R$66,99", imagem: "img/bebidas/ciroc.png"},
+                    {id: 15, nome: "cerveja", preco: "R$66,99", imagem: "img/bebidas/whisky.png"}];
 
 var list = [document.getElementById('principaisProdutos'),
             document.getElementById('cervejas'),
@@ -59,6 +59,7 @@ for (i = 0; i < list.length; i = i + 1) {
 
         var preco = document.createElement('button');
         preco.innerHTML = bebidas[x].preco;
+        preco.setAttribute("onclick","addInCar(" + bebidas[x].id + ",1)");
 
         var cap = document.createElement('div');
         cap.className = "caption";
