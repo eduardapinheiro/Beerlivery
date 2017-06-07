@@ -2,6 +2,8 @@ function addInCar(id, qtd){
     firebase.database().ref('carrinho/' + userID + '/itens/'+ id).update({
       qtd: qtd
     });
+    
+    getCarrinho("home");
 }
 
 function updateQtd (id, qtd){
@@ -48,19 +50,28 @@ function imgLoader (id) {
   });
 }
 
-function getCarrinho () {
-  console.log("carrinho");
+function getCarrinho (tela) {
   firebase.database().ref('/carrinho/' + userID + '/itens/').once('value').then(function(snapshot) {
     $("#carregando").hide();
   var itens = snapshot.val();
+  if(tela == "home"){
+
+    var total=0;
+
+    for(var count = 1 ; count < itens.length ; count++){
+        total += itens[count].qtd;
+    }
+    $("#addCarrinho").text('(' + total + ') Carrinho'); 
+  }
   return itens;
   });
 }
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    getCarrinho();
-    //removeFromCarrinho(1);
+    getCarrinho("carrinho");
+//    removeFromCarrinho(1);
+//      updateQtd(1,0);
     // ...
   } else {
     // User is signed out.
