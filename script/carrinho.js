@@ -55,13 +55,7 @@ function getCarrinho (tela) {
     $("#carregando").hide();
   var itens = snapshot.val();
   if(tela == "home"){
-
-    var total=0;
-
-    for(var count = 1 ; count < itens.length ; count++){
-        total += itens[count].qtd;
-    }
-    $("#addCarrinho").text('(' + total + ') Carrinho'); 
+    $("#addCarrinho").text('(' + (itens.length - 1) + ') Carrinho');
   }
   return itens;
   });
@@ -72,6 +66,11 @@ firebase.auth().onAuthStateChanged(function(user) {
     getCarrinho("carrinho");
 //    removeFromCarrinho(1);
 //      updateQtd(1,0);
+//      updateQtd(2,0);
+//      updateQtd(3,0);
+//      updateQtd(4,0);
+//      updateQtd(5,0);
+//      updateQtd(6,0);
     // ...
   } else {
     // User is signed out.
