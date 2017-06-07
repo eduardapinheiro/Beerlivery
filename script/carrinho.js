@@ -2,7 +2,6 @@ function addInCar(id, qtd){
     firebase.database().ref('carrinho/' + userID + '/itens/'+ id).update({
       qtd: qtd
     });
-
 }
 
 function updateQtd (id, qtd){
