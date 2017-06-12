@@ -105,12 +105,12 @@ function getCarrinho (tela) {
                             
                             precoTotal += parseFloat(itens2[idProduto].preco) * parseInt(itens[idProduto].qtd);
                             
-                            $("#preencherCarrinho").append('<tr class="productitm"><td id="itemCarrinho"><img src="img/bebidas/' + idProduto + '.png" class="thumb"></td><td id="qtdCarrinho"><input id="precoItem' + idProduto + '" type="number" value="' + itens[idProduto].qtd + '" min="0" max="99" class="qtyinput"></td><td id="produtoCarrinho">' + itens2[idProduto].nome + '</td><td id="precoCarrinho">' + itens2[idProduto].preco + '</td><td><span class="remove"><img src="img/trash.png" alt="X"></span></td><td><button onclick="atualizarItem('+idProduto+')">Atualizar</button></td></tr>');
+                            $("#preencherCarrinho").append('<tr class="productitm"><td id="itemCarrinho"><img src="img/bebidas/' + idProduto + '.png" class="thumb"></td><td id="qtdCarrinho"><input id="precoItem' + idProduto + '" type="number" value="' + itens[idProduto].qtd + '" min="0" max="99" class="qtyinput"></td><td id="produtoCarrinho">' + itens2[idProduto].nome + '</td><td id="precoCarrinho">' + currencyFormatted(itens2[idProduto].preco,"R$") + '</td><td><span class="remove"><img src="img/trash.png" alt="X"></span></td><td><button onclick="atualizarItem('+idProduto+')">Atualizar</button></td></tr>');
                         }
                     }
                 }
 
-                $(".thick").text("R$"+precoTotal.toFixed(2));
+                $(".thick").text(currencyFormatted(precoTotal,"R$"));
 
                 return itens;
             });
@@ -129,6 +129,21 @@ function atualizarItem(id){
     
     updateQtd(id,segundo);
 }
+
+function currencyFormatted(value, str_cifrao) {
+    return str_cifrao + ' ' + value.formatMoney(2, ',', '.');
+}
+
+Number.prototype.formatMoney = function (c, d, t) {
+    var n = this,
+        c = isNaN(c = Math.abs(c)) ? 2 : c,
+        d = d == undefined ? "." : d,
+        t = t == undefined ? "," : t,
+        s = n < 0 ? "-" : "",
+        i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
+        j = (j = i.length) > 3 ? j % 3 : 0;
+    return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+};
 
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
