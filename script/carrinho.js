@@ -88,32 +88,40 @@ function getCarrinho (tela) {
         if(tela == "home"){
             $("#addCarrinho").text('(' + Object.keys(itens).length + ') Carrinho');
         }else if(tela == "carrinho"){
-            firebase.database().ref('/bebidas/').once('value').then(function(snapshot2) {
-                var itens2 = snapshot2.val();
-                var precoTotal = 0;
+            
+            if(itens != null){
                 
-                var chavesCarrinho = Object.keys(itens);
-                var chavesBebidas = Object.keys(itens2);
-                
-                for(var count=0 ; count < chavesCarrinho.length ; count++){
+               firebase.database().ref('/bebidas/').once('value').then(function(snapshot2) {
+                    var itens2 = snapshot2.val();
+                    var precoTotal = 0;
 
-                    for(var count2=0 ; count2 < chavesBebidas.length ; count2++){
+                    var chavesCarrinho = Object.keys(itens);
+                    var chavesBebidas = Object.keys(itens2);
 
-                        if(chavesCarrinho[count] == chavesBebidas[count2]){
-                            
-                            var idProduto = chavesCarrinho[count];
-                            
-                            precoTotal += parseFloat(itens2[idProduto].preco) * parseInt(itens[idProduto].qtd);
-                            
-                            $("#preencherCarrinho").append('<tr class="productitm"><td id="itemCarrinho"><img src="img/bebidas/' + idProduto + '.png" class="thumb"></td><td id="qtdCarrinho"><input id="precoItem' + idProduto + '" type="number" value="' + itens[idProduto].qtd + '" min="0" max="99" class="qtyinput"></td><td id="produtoCarrinho">' + itens2[idProduto].nome + '</td><td id="precoCarrinho">' + currencyFormatted(itens2[idProduto].preco,"R$") + '</td><td><span class="remove"><img src="img/trash.png" alt="X"></span></td><td><button onclick="atualizarItem('+idProduto+')">Atualizar</button></td></tr>');
+                    for(var count=0 ; count < chavesCarrinho.length ; count++){
+
+                        for(var count2=0 ; count2 < chavesBebidas.length ; count2++){
+
+                            if(chavesCarrinho[count] == chavesBebidas[count2]){
+
+                                temProdutos = 1;
+
+                                var idProduto = chavesCarrinho[count];
+
+                                precoTotal += parseFloat(itens2[idProduto].preco) * parseInt(itens[idProduto].qtd);
+
+                                $("#preencherCarrinho").append('<tr class="productitm"><td id="itemCarrinho"><img src="img/bebidas/' + idProduto + '.png" class="thumb"></td><td id="qtdCarrinho"><input id="precoItem' + idProduto + '" type="number" value="' + itens[idProduto].qtd + '" min="0" max="99" class="qtyinput"></td><td id="produtoCarrinho">' + itens2[idProduto].nome + '</td><td id="precoCarrinho">' + currencyFormatted(itens2[idProduto].preco,"R$") + '</td><td><span class="remove"><img src="img/trash.png" alt="X"></span></td><td><button onclick="atualizarItem('+idProduto+')">Atualizar</button></td></tr>');
+                            }
                         }
                     }
-                }
 
-                $(".thick").text(currencyFormatted((precoTotal+3),"R$")); //Soma com 3 por causa do frete
+                    $(".thick").text(currencyFormatted((precoTotal+3),"R$")); //Soma com 3 por causa do frete
 
-                return itens;
-            });
+                    return itens;
+                }); 
+            }else{
+                $("#preencherCarrinho").append('<div id="semProdutos"><h1>Não há produtos cadastrados no carrinho</h1></div>');
+            }
         }
         return itens;
     });

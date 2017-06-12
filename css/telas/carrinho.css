@@ -38,6 +38,12 @@ table { border-collapse: collapse; border-spacing: 0; }
   width: 20px;
 }
 
+#semProdutos{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px;
+}
+
 #itemCarrinho {
     height: 130px;
     width: 275px;
