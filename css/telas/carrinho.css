@@ -5,7 +5,8 @@
 ::-webkit-selection { background: #D9CAAF;; }
 
 table { border-collapse: collapse; border-spacing: 0; }
-img { border: 0; max-width: 100%; }
+
+
 
 /** cart table **/
 #cart {
@@ -35,6 +36,31 @@ img { border: 0; max-width: 100%; }
 }
 #cart thead th.fifth {
   width: 20px;
+}
+
+#itemCarrinho {
+    height: 130px;
+    width: 275px;
+    text-align: center;
+}
+
+#itemCarrinho img {
+    height: 130px;
+}
+
+#qtdCarrinho {
+    width: 70px;
+    text-align: center;
+}
+
+#produtoCarrinho{
+    width: 400px;
+    text-align: center;
+}
+
+#precoCarrinho{
+    width: 100px;
+    text-align: center;
 }
 
 #cart tbody td {
@@ -72,11 +98,9 @@ tr.extracosts {
 }
 
 .remove {
- 
   cursor: pointer;
   position: relative;
   right: 12px;
-  top: 5px;
 }
 
 
@@ -107,7 +131,6 @@ td.checkout {
   text-align: right;
 }
 
-
 #submitbtn {
   width: 150px;
   height: 35px;
@@ -130,6 +153,8 @@ td.checkout {
   background-image: linear-gradient(#fff, #fff);
 }
 
+
+
 #submitbtn:hover {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4d9cff), color-stop(100%, #338eff));
   background-image: -webkit-linear-gradient(#fff, #fff);
@@ -137,6 +162,7 @@ td.checkout {
   background-image: -o-linear-gradient(#fff, #fff;
   background-image: linear-gradient(#fff, #fff);
 }
+
 
 #submitbtn:active {
   border-bottom: 0;
@@ -149,3 +175,4 @@ td.checkout {
   -moz-box-shadow: inset 0 1px 3px 1px rgba(0,0,0,0.25);
   box-shadow: inset 0 1px 3px 1px rgba(0,0,0,0.25);
 }
+

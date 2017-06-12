@@ -27,24 +27,82 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 function login (){
-firebase.auth().signInAnonymously().catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  console.log(errorCode);
-  console.log(errorMessage);
-  // ...
-});
+    firebase.auth().signInAnonymously().catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode);
+        console.log(errorMessage);
+        // ...
+    });
 }
 
 login();
 
 function getCatalogo () {
-  console.log("catalogo:");
-  firebase.database().ref('/bebidas/').once('value').then(function(snapshot) {
-  var itens = snapshot.val();
-  return itens;
-  });
+    firebase.database().ref('/bebidas/').once('value').then(function(snapshot) {
+        var itens = snapshot.val();
+
+        var json = itens;
+
+        //      console.log(json);
+
+        var produtos = [];
+
+        var length = json.length;
+        //console.log(length);
+        for(var count = 1; count <= length - 1 ; count++){
+
+            var bebida = json[count];
+
+            produtos.push({id: bebida.id, nome: bebida.nome, preco: bebida.preco, imagem: "img/bebidas/" + bebida.id + ".png"});
+        }
+
+        var bebidas = document.getElementById('produtos');
+
+        for (var x = 0; x < produtos.length; x = x + 1) {
+
+            var nomeProduto = document.createElement('a');
+            nomeProduto.innerHTML = produtos[x].nome;
+            nomeProduto.href = "#";
+
+            var namein = document.createElement('h4');
+            namein.id = "nameInThumb";
+            namein.appendChild(nomeProduto);
+
+            var preco = document.createElement('button');
+            preco.innerHTML = produtos[x].preco;
+            preco.setAttribute("onclick","addInCar(" + produtos[x].id + ",1)");
+
+            var cap = document.createElement('div');
+            cap.className = "caption";
+            cap.appendChild(namein);
+            cap.appendChild(preco);
+
+            var imagem = document.createElement('img');
+            imagem.src = produtos[x].imagem;
+            imagem.alt = "";
+
+            var thumb = document.createElement('div');
+            thumb.className = "thumbnail";
+            thumb.appendChild(imagem);
+            thumb.appendChild(cap);
+
+            var celulaProduto = document.createElement('div');
+            celulaProduto.className = "col-sm-4 col-lg-4 col-md-4";
+            celulaProduto.appendChild(thumb);
+
+            bebidas.appendChild(celulaProduto);
+
+            //        if (i === list.lastIndexOf) {
+            //            list[i].appendChild(celulaProduto);
+            //        } else {
+            //            list[0].insertBefore(celulaProduto, list[i + 1]);
+            //        }
+        }
+
+        return itens;
+    });
 }
 
 // // Points to the root reference
