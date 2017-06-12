@@ -41,6 +41,7 @@ login();
 
 function getCatalogo () {
     firebase.database().ref('/bebidas/').once('value').then(function(snapshot) {
+        $("#carregandoHome").hide();
         var itens = snapshot.val();
 
         var json = itens;

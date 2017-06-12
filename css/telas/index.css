@@ -22,3 +22,7 @@ img {
     border-radius: 50%;
     background-color: rgba(128, 64, 0, 0.4);
 }
+
+#carregandoHome {
+    margin-bottom: 20px;
+}
