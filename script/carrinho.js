@@ -66,23 +66,22 @@ function getCarrinho (tela) {
                 var chavesCarrinho = Object.keys(itens);
                 var chavesBebidas = Object.keys(itens2);
                 
-                for(var count=0 ; count <= chavesCarrinho.length ; count++){
+                for(var count=0 ; count < chavesCarrinho.length ; count++){
 
-                    for(var count2=0 ; count2 <= chavesBebidas.length ; count2++){
+                    for(var count2=0 ; count2 < chavesBebidas.length ; count2++){
 
                         if(chavesCarrinho[count] == chavesBebidas[count2]){
                             
                             var idProduto = chavesCarrinho[count];
                             
-                            precoTotal += parseFloat(itens2[idProduto].preco);
+                            precoTotal += parseFloat(itens2[idProduto].preco) * parseInt(itens[idProduto].qtd);
                             
                             $("#preencherCarrinho").append('<tr class="productitm"><td id="itemCarrinho"><img src="img/bebidas/' + idProduto + '.png" class="thumb"></td><td id="qtdCarrinho"><input id="precoItem' + idProduto + '" type="number" value="' + itens[idProduto].qtd + '" min="0" max="99" class="qtyinput"></td><td id="produtoCarrinho">' + itens2[idProduto].nome + '</td><td id="precoCarrinho">' + itens2[idProduto].preco + '</td><td><span class="remove"><img src="img/trash.png" alt="X"></span></td><td><button onclick="atualizarItem('+idProduto+')">Atualizar</button></td></tr>');
-                            
                         }
                     }
                 }
 
-                $(".thick").text(precoTotal);
+                $(".thick").text("R$"+precoTotal.toFixed(2));
 
                 return itens;
             });
