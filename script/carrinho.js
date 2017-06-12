@@ -11,16 +11,45 @@ function updateQtd (id, qtd){
     console.log(userID);
     firebase.database().ref('/carrinho/' + userID + '/itens/').once('value').then(function(snapshot) {
         var itens = snapshot.val();
-        console.log(itens);
+        
         for (var item in itens) {
-            console.log(itens);
+            
             if (item == id) {
-                console.log("atualizado");
+                
                 firebase.database().ref('carrinho/' + userID + '/itens/'+ id).update({
                     qtd: qtd
                 });
-            }
+                
+                firebase.database().ref('/carrinho/' + userID + '/itens/').once('value').then(function(snapshot) {
+                    var itens = snapshot.val();
 
+                        firebase.database().ref('/bebidas/').once('value').then(function(snapshot2) {
+                            var itens2 = snapshot2.val();
+                            var precoTotal = 0;
+
+                            var chavesCarrinho = Object.keys(itens);
+                            var chavesBebidas = Object.keys(itens2);
+
+                            for(var count=0 ; count < chavesCarrinho.length ; count++){
+
+                                for(var count2=0 ; count2 < chavesBebidas.length ; count2++){
+
+                                    if(chavesCarrinho[count] == chavesBebidas[count2]){
+
+                                        var idProduto = chavesCarrinho[count];
+
+                                        precoTotal += parseFloat(itens2[idProduto].preco) * parseInt(itens[idProduto].qtd);
+                                    }
+                                }
+                            }
+
+                            $(".thick").text("R$"+precoTotal.toFixed(2));
+
+                            return itens;
+                        });
+                    return itens;
+                });
+            }
         }
     });
 }
