@@ -110,7 +110,7 @@ function getCarrinho (tela) {
                     }
                 }
 
-                $(".thick").text(currencyFormatted(precoTotal,"R$"));
+                $(".thick").text(currencyFormatted((precoTotal+3),"R$")); //Soma com 3 por causa do frete
 
                 return itens;
             });

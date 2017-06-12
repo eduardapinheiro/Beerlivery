@@ -71,7 +71,7 @@ function getCatalogo () {
             namein.appendChild(nomeProduto);
 
             var preco = document.createElement('button');
-            preco.innerHTML = produtos[x].preco;
+            preco.innerHTML = currencyFormatted(produtos[x].preco,"R$");
             preco.setAttribute("onclick","addInCar(" + produtos[x].id + ",1)");
 
             var cap = document.createElement('div');
