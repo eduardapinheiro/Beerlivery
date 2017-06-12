@@ -131,26 +131,29 @@ tr.extracosts {
 
 
 /** submit btn **/
-tr.checkoutrow {
-  background: rgba(169, 117, 61, 0.7);
-  border-top: 1px solid #C2AB90;
-  border-bottom: 1px solid #C2AB90;
+div.checkoutrow {
+    margin-top: 40px;
+    height: 80px;
+    text-align: center;
+    background: rgba(169, 117, 61, 0.7);
+    border-top: 1px solid #C2AB90;
+    border-bottom: 1px solid #C2AB90;
 }
 
-td.checkout {
-  padding: 12px 0;
-  padding-top: 20px;
-  width: 100%;
-  text-align: right;
+#infPessoais{
+    width: 100%;
+    margin-top: 40px;
+    padding-right: 50px;
+    padding-left: 40px;
 }
 
 #submitbtn {
-  width: 150px;
+  width: 200px;
   height: 35px;
   outline: none;
   border: none;
   border-radius: 5px;
-  margin: 0 0 10px 0;
+  margin: 20px 0 10px 0;
   font-size: 1.3em;
   letter-spacing: 0.05em;
   font-family: Arial, Tahoma, sans-serif;
@@ -162,7 +165,7 @@ td.checkout {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #66aaff), color-stop(100%, #4d9cff));
    background-image: -webkit-linear-gradient(#fff, #fff);
   background-image: -moz-linear-gradient(#fff, #fff);
-  background-image: -o-linear-gradient(#fff, #fff;
+  background-image: -o-linear-gradient(#fff, #fff);
   background-image: linear-gradient(#fff, #fff);
 }
 

@@ -90,7 +90,7 @@
                             <th class="fifth">&nbsp;</th>
                           </tr>
                         </thead>
-                        <tbody>
+                         <tbody>
                           <tr>
                             <td colspan="5">
                               <center><img src="img/carregando.gif" width="10%" id="carregando"></center>
@@ -114,13 +114,39 @@
                             <td colspan="2">&nbsp;</td>
                             <td colspan="2"><span class="thick">R$00,00</span></td>
                           </tr>
-
-                          <!-- checkout btn -->
-                          <tr class="checkoutrow">
-                            <td colspan="5" class="checkout"><button id="submitbtn">Finalizar agora!</button></td>
-                          </tr>
+                          
                         </tbody>
                     </table>
+                    
+                    <div id="infPessoais" class="container">
+                        <form action="" method="post">
+
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label" for="nome">Nome Completo:</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="text" id="nome" name="nome" placeholder="Nome Completo" maxlength="45" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label" for="telefone">Telefone:</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="tel" id="telefone" name="telefone" placeholder="Telefone" maxlength="45" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-2 col-form-label" for="endereco">Endereço:</label>
+                                <div class="col-10">
+                                    <input class="form-control" type="text" id="endereco" name="endereco" placeholder="Nome" maxlength="45" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                          
+                          <!-- checkout btn -->
+                          <div class="checkoutrow">
+                            <button id="submitbtn">Finalizar agora!</button>
+                          </div>
                     
                 </div>
 
