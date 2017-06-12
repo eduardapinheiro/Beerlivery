@@ -63,9 +63,8 @@ function getCatalogo () {
 
         for (var x = 0; x < produtos.length; x = x + 1) {
 
-            var nomeProduto = document.createElement('a');
+            var nomeProduto = document.createElement('h4');
             nomeProduto.innerHTML = produtos[x].nome;
-            nomeProduto.href = "#";
 
             var namein = document.createElement('h4');
             namein.id = "nameInThumb";
